@@ -1,0 +1,84 @@
+git commit -a -m "message"
+git push -u origin master
+
+GA 05/04/19
+Pasos para entrenar una red neuronal
+1. Escalar Valores a [0,1)
+2. Enriquecer los datos (evitar discontinuidades)
+3. Medir la información
+4. Encontrar H (el no. de neuronas en la capa oculta)
+5. Entrenar la red (con un algoritmo genético)
+
+No. de conexiones (noVar+1)H + (H+1)*noOut
+Para evitar sobreajuste esa cantidad debe ser aproximadamente |S|/3, 
+donde S es el conjunto de entrenamiento.
+
+¿Cómo conocer H?
+Paper: H = f(Tamaño en bytes de S,noVar)
+Medición de información: a) Shannon, b) Comprimir y el tamaño resultante del archivo binario es la cantidad 
+de infomación. (Información algorítmica y estadística)s
+
+
+
+PSNP4214
+23.08.2019 Teoría de la información
+--Estadística: Inf(S)=-log2(p(S)), donde p(S) es la probabilidad de que el símbolo S aparezca.
+Entropía = H(S) = Sum_S P(S)I(S), esperanza de la información.
+Entropía alta, mucha información, mucha variabilidad.
+
+--Algorítmica: La complejidad de un conjunto de símbolos es la longitud en bytes del programa más corto que puede
+reproducir el conjunto.
+
+TAREA 23/08
+- No tomar todas las entradas, 
+- Ignorar variable "country"
+- 12 neuronas intermedias
+- Ejercicios de estabilizar, y correr abalone
+
+- Leer Haykin, cap 2
+
+
+Deepl (29/Ago/2019)
+Presentaciones última semana de Sept
+1. Máx 25 min
+2. Problema (contexto)
+3. Motivación
+4. Contribución
+5. Antecedentes
+6. Idea básica
+7. Detalles
+8. Evaluación
+9. Resultados
+10. Crítica
+11. Conclusiones/Trabajo futuro
+
+NN (30/Ago/2019)
+- Presentación sobre VC
+- 2.13
+- 2.14
+- 2.15
+- Holden y Niranjan
+- Correlation and dependence (wikipedia)
+
+Dimensión VC
+1. Learning Machine
+2. Espacio de dicotomías generado por una Learning Machine
+3. Ejemplo de un espacio (Example 2.1) 
+
+4. Shattering y definición de dimensión VC
+5. Ejemplo (Examples 2.2 y 2.3)
+
+6. Importancia de la dimensión VC y su estimación
+7. Intuición de en qué ayuda saber la dimensión VC en Redes Neuronales
+8. (breve y sin detalles) Structural Risk minimization
+
+
+Pasos para entrenar NN en presencia de datos discontinuos
+- Reducir variables mediante análisis de correlaciones
+- Poner dos capas ocultas en la red
+- Ó interpolar con splines, y pasar datos continuos a una NN con una sola capa oculta
+
+jorge.calvillo@comunidad.unam.mx
+antony_ayal@hotmail.com
+murbj@gmail.com
+
